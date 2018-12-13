@@ -1,0 +1,31 @@
+<html>
+<style>
+	th,td {border: 1px solid #000;}
+</style>
+<title>Symfony Repositories</title>
+<body>
+{% if arrRespositories is defined and arrRespositories is not empty and arrRespositories is not null %}
+	<table style='border: 1px solid #000;'>
+		<thead >
+			<tr>
+				<th>Sr No.		</th>
+				<th>Bundle Name </th>
+				<th>Description </th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for arrData in arrRespositories %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td><a href='{{arrData.html_url}}' target='_blank' >{{arrData.name}}</a></td>
+				<td>{{arrData.description}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endif %}	
+{% if strErrMsg is defined and strErrMsg is not empty and strErrMsg is not null %}
+	{{strErrMsg}}
+{% endif %}
+</body>
+</html>

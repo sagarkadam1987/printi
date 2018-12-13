@@ -1,0 +1,7 @@
+testprinti:
+    resource: "@testprintiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

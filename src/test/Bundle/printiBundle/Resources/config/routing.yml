@@ -1,0 +1,3 @@
+testprinti_homepage:
+    path:     /
+    defaults: { _controller: testprintiBundle:Default:index }
